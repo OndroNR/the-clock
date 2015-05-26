@@ -1,0 +1,14 @@
+.clockGreen {
+	filter: none;
+	background: url(bgs.png) 0 0 no-repeat;
+}
+
+.clockBlue {
+	filter: none;
+	background: url(bgs.png) 0 -115px no-repeat;
+}
+
+.clockOrange {
+	filter: none;
+	background: url(bgs.png) 0 -230px no-repeat;
+}

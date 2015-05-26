@@ -1,0 +1,122 @@
+body {
+	background: white;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 200px;
+	text-align: left;
+}
+
+.clockGreen {
+	background: #e6f0a3; /* Old browsers */
+	background: -moz-linear-gradient(top, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6f0a3), color-stop(50%,#d2e638), color-stop(51%,#c3d825), color-stop(100%,#dbf043)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Opera11.10+ */
+	/*background: -ms-linear-gradient(top, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* IE10+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+	box-shadow: 0 0 10px #c3d825;
+	background: url(bgs.png) 0 0 no-repeat;
+}
+
+.clockBlue {
+	background: #b7deed; /* Old browsers */
+	background: -moz-linear-gradient(top, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b7deed), color-stop(50%,#71ceef), color-stop(51%,#21b4e2), color-stop(100%,#b7deed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* IE10+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* W3C */
+	box-shadow: 0 0 10px #21b4e2;
+	background: url(bgs.png) 0 -115px no-repeat;
+}
+
+.clockOrange {
+	background: #feccb1; /* Old browsers */
+	background: -moz-linear-gradient(top, #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* IE10+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* W3C */
+	box-shadow: 0 0 10px #ea5507;
+	background: url(bgs.png) 0 -230px no-repeat;
+}
+
+#clock, .timer {
+	margin: 20px auto 0 auto;
+
+	width: 150px;	
+	height: 70px;
+	padding-top: 30px;
+
+	border-radius: 0.7em;
+	-ms-border-radius: 0.7em;
+	-webkit-border-radius: 0.7em;
+	-o-border-radius: 0.7em;
+	-moz-border-radius: 0.7em;
+	
+	color: #fff;
+	text-shadow: #555 0px 0px 7px;
+
+	text-align: center;
+	font-size: 2em;
+	
+	position: relative;
+}
+
+.paused {
+	box-shadow: 0 0  10px red;
+}
+
+#addTimer {
+	background: transparent url(clock_add.png) left top no-repeat;
+	width: 16px; height: 16px;
+	position: relative;
+	left: 120px;
+	top: 30px;
+	cursor: hand;
+	cursor: pointer;
+	margin: 0 auto;
+	opacity: 0.3;
+} 
+
+.toolbar {
+	position: absolute;
+	bottom: 10px;
+	left: 36px;
+	height: 16px;
+	width: 120px;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+}
+
+.toolbar .pause, .toolbar .play, .toolbar .delete {
+	width: 16px;
+	height: 16px;
+	margin: 0 5px;
+	display: block;
+	padding: 0;
+	background: transparent top left no-repeat;
+	float: left;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.toolbar .pause {
+	background-image: url(clock_pause.png);
+}
+.toolbar .play {
+	background-image: url(clock_play.png);
+	display: none;
+}
+.toolbar .delete {
+	background-image: url(clock_delete.png);
+}
